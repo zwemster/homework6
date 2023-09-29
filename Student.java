@@ -29,5 +29,10 @@ public class Student implements Observer{
         }
     }
 
+    @Override
+    public boolean interestedInVacancy(Vacancy.VacancyType type) {
+        return true;
+    }
+
     //endregion
 }

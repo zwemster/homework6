@@ -30,5 +30,10 @@ public class Professional implements Observer{
         }
     }
 
+    @Override
+    public boolean interestedInVacancy(Vacancy.VacancyType type) {
+        return type == Vacancy.VacancyType.SALES;
+    }
+
     //endregion
 }

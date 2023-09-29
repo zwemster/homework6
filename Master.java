@@ -29,5 +29,10 @@ public class Master implements Observer{
         }
     }
 
+    @Override
+    public boolean interestedInVacancy(Vacancy.VacancyType type) {
+        return type == Vacancy.VacancyType.IT;
+    }
+
     //endregion
 }

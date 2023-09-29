@@ -12,9 +12,11 @@ public class JobAgency implements Publisher{
     //region Overrided Methods
 
     @Override
-    public void sendOffer(String companyName, double salary) {
+    public void sendOffer(String companyName, Vacancy vacancy, double salary) {
         for (Observer observer : observers) {
-            observer.receiveOffer(companyName, salary);
+            if (observer.interestedInVacancy(vacancy.getType())) {
+                observer.receiveOffer(companyName, salary);
+            }
         }
     }
 
