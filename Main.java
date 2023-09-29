@@ -8,10 +8,12 @@ public class Main {
         Student student1 = new Student("Nick Dickson");
         Master master1 = new Master("Walter Copperfield");
         Master master2 = new Master("Grace Park");
+        Professional professional1 = new Professional("Arthur Cane");
 
         jobAgency.registerObserver(student1);
         jobAgency.registerObserver(master1);
         jobAgency.registerObserver(master2);
+        jobAgency.registerObserver(professional1);
 
         for (int i = 0; i < 3; i++) {
             google.needEmployee();
