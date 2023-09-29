@@ -6,17 +6,26 @@ public class Company {
 
     private Random random = new Random();
     private String name;
-    private JobAgency jobAgency;
+    private Publisher jobAgency;
     private double maxSalary;
 
     //endregion
 
     //region Constructors
 
-    public Company(String name, JobAgency jobAgency, double maxSalary) {
+    public Company(String name, Publisher jobAgency, double maxSalary) {
         this.name = name;
         this.jobAgency = jobAgency;
         this.maxSalary = maxSalary;
+    }
+
+    //endregion
+
+    //region Public Methods
+
+    public void needEmployee() {
+        double salary = random.nextDouble(maxSalary);
+        jobAgency.sendOffer(name, salary);
     }
 
     //endregion
